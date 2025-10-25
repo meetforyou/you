@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Your Love | Find Your Perfect Match in Morocco</title>
+    <meta name="description" content="Find your perfect match in Morocco. Connect with verified singles in your area. Join now for free!">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Meet Your Love - Find Your Perfect Match">
+    <meta property="og:description" content="Join thousands of singles in Morocco finding love. Free registration, verified profiles, instant messaging.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://meetyourlove.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MeetYourLove">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meet Your Love - Find Your Perfect Match">
+    <meta name="twitter:description" content="Join thousands of singles in Morocco finding love. Free registration, verified profiles, instant messaging.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #d81b60; /* Reduced pink intensity */
+            --primary-dark: #ad1457;
+            --secondary: #8e24aa;
+            --accent: #ec407a;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --text: #333;
+            --success: #4caf50;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --glass: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-login {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-login:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-signup {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .btn-signup:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://cdni.pornpics.com/1280/1/41/55810520/55810520_010_7be7.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3; /* Increased opacity to show background more */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .location i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Rocket Button Styles */
+        .rocket-btn-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-hero {
+            background: white;
+            color: var(--primary);
+            padding: 1rem 3rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            border-radius: 50px;
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-hero:hover .rocket-icon {
+            animation: rocketLaunch 0.6s ease-in-out;
+        }
+
+        .rocket-icon {
+            font-size: 1.5rem;
+            transition: all 0.4s;
+        }
+
+        .fire-effect {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 35px;
+            background: linear-gradient(to top, #ff9900, #ff3300);
+            border-radius: 50% 50% 0 0;
+            opacity: 0;
+            filter: blur(5px);
+            transition: all 0.4s;
+            z-index: 1;
+        }
+
+        .btn-hero:hover .fire-effect {
+            opacity: 1;
+            animation: fireAnimation 0.6s infinite alternate;
+        }
+
+        .privacy-note {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+            font-size: 2.2rem;
+        }
+
+        .section-title span {
+            color: var(--primary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        /* What Makes Us Different Section */
+        .difference {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+
+        .difference-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .difference-text {
+            padding-right: 2rem;
+        }
+
+        .difference-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .difference-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .difference-stats {
+            background: var(--gradient);
+            color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .difference-stats h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .user-counter {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .counter-label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Notifications - Updated for Mobile */
+        .notification-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 320px;
+        }
+
+        .notification {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-left: 4px solid var(--primary);
+            display: flex;
+            align-items: center;
+            animation: slideInRight 0.5s ease, fadeOut 0.5s ease 4.5s forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .notification::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient);
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        .notification-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            border: 2px solid var(--primary);
+        }
+
+        .notification-content {
+            flex: 1;
+        }
+
+        .notification-name {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .notification-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .notification-time {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        /* Special Offer Banner */
+        .special-offer {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            animation: pulse 2s infinite;
+            box-shadow: var(--shadow);
+            border: 2px dashed var(--primary);
+            position: relative;
+            overflow: hidden;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .special-offer::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+
+        .special-offer::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: -15px;
+            width: 70px;
+            height: 70px;
+            background: var(--secondary);
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+
+        .special-offer h3 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .special-offer p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Slideshow Background for Timer */
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide.active {
+            opacity: 0.3;
+        }
+
+        /* Professional Timer */
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timer {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+            font-family: 'Courier New', monospace;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px;
+        }
+
+        .timer-digits {
+            display: flex;
+            gap: 5px;
+        }
+
+        .timer-separator {
+            margin: 0 5px;
+            color: var(--primary);
+        }
+
+        .timer-label {
+            font-size: 0.9rem;
+            color: var(--primary-dark);
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        .btn-offer {
+            background: var(--primary-dark);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-offer:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* CPA Modal */
+        .cpa-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cpa-modal.active {
+            display: flex;
+        }
+
+        .cpa-content {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cpa-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .cpa-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .cpa-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .cpa-close:hover {
+            color: var(--primary);
+        }
+
+        /* Animations */
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; transform: translateX(100%); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(216, 27, 96, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(216, 27, 96, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(216, 27, 96, 0); }
+        }
+
+        /* Rocket and Fire Animations */
+        @keyframes rocketLaunch {
+            0% { transform: translateY(0) rotate(0); }
+            25% { transform: translateY(-8px) rotate(-5deg); }
+            50% { transform: translateY(-12px) rotate(0); }
+            75% { transform: translateY(-8px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0); }
+        }
+
+        @keyframes fireAnimation {
+            0% { 
+                height: 25px; 
+                background: linear-gradient(to top, #ff9900, #ff3300);
+                filter: blur(4px);
+                width: 20px;
+            }
+            50% { 
+                height: 35px; 
+                background: linear-gradient(to top, #ffcc00, #ff6600);
+                filter: blur(6px);
+                width: 25px;
+            }
+            100% { 
+                height: 30px; 
+                background: linear-gradient(to top, #ff9900, #ff3300);
+                filter: blur(5px);
+                width: 22px;
+            }
+        }
+
+        /* Responsive Design - Mobile Improvements */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            nav ul li {
+                margin-left: 0.8rem;
+                margin-right: 0.8rem;
+            }
+            
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .location {
+                font-size: 1.1rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .auth-buttons {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .difference-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .difference-text {
+                padding-right: 0;
+            }
+            
+            /* Updated Notifications for Mobile */
+            .notification-container {
+                width: 90%;
+                right: 5%;
+                top: 10px;
+            }
+            
+            .notification {
+                padding: 12px;
+                margin-bottom: 10px;
+            }
+            
+            .notification-avatar {
+                width: 45px;
+                height: 45px;
+                margin-right: 12px;
+            }
+            
+            .notification-name {
+                font-size: 0.9rem;
+            }
+            
+            .notification-text {
+                font-size: 0.8rem;
+            }
+            
+            .notification-time {
+                font-size: 0.75rem;
+            }
+            
+            .btn-hero {
+                padding: 0.8rem 2rem;
+                font-size: 1.1rem;
+            }
+            
+            .timer {
+                font-size: 1.8rem;
+                padding: 8px 15px;
+            }
+            
+            .special-offer {
+                min-height: 220px;
+                padding: 15px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .btn {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .timer {
+                font-size: 1.5rem;
+                padding: 6px 12px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .user-counter {
+                font-size: 2.5rem;
+            }
+            
+            /* Further reduced notification size for very small screens */
+            .notification-avatar {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
+            
+            .notification {
+                padding: 10px;
+            }
+            
+            .notification-name {
+                font-size: 0.85rem;
+            }
+            
+            .notification-text {
+                font-size: 0.75rem;
+            }
+            
+            .notification-time {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- CPA Modal -->
+    <div class="cpa-modal" id="cpaModal">
+        <div class="cpa-content">
+            <button class="cpa-close" id="cpaClose">&times;</button>
+            <h3>Complete Verification</h3>
+            <p>Please complete the verification to continue to MeetYourLove</p>
+            <div data-captcha-enable="true" id="cpaContainer"></div>
+        </div>
+    </div>
+
+    <!-- Notifications Container -->
+    <div class="notification-container" id="notificationContainer">
+        <!-- Notifications will be added here by JavaScript -->
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" id="logo">Meet<span>YourLove</span></div>
+                <nav>
+                    <ul>
+                        <li><a class="cpa-trigger">Home</a></li>
+                        <li><a class="cpa-trigger">Discover</a></li>
+                        <li><a class="cpa-trigger">Matches</a></li>
+                        <li><a class="cpa-trigger">Messages</a></li>
+                        <li><a class="cpa-trigger">Premium</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn btn-login cpa-trigger">Login</button>
+                    <button class="btn btn-signup cpa-trigger">Sign Up Free</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Meet Your Love</h1>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="userLocation">Detecting your location...</span>
+                </div>
+                <p id="newUsersMessage">5 new people in your area joined in the last hour! Don't miss out!</p>
+                
+                <div class="special-offer">
+                    <!-- Slideshow Background -->
+                    <div class="slideshow-container" id="slideshowContainer">
+                        <!-- Slides will be added by JavaScript -->
+                    </div>
+                    
+                    <h3>FREE SUBSCRIPTION!</h3>
+                    <p>Limited time offer - Valid for 5 minutes only!</p>
+                    <div class="timer-container">
+                        <div class="timer" id="offerTimer">
+                            <div class="timer-digits">
+                                <span id="minutes">05</span>
+                                <span class="timer-separator">:</span>
+                                <span id="seconds">00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timer-label">HURRY! OFFER EXPIRES SOON</div>
+                    <button class="btn-offer cpa-trigger">CLAIM NOW</button>
+                </div>
+                
+                <div class="rocket-btn-container">
+                    <button class="btn btn-hero cpa-trigger">
+                        <i class="fas fa-rocket rocket-icon"></i>
+                        Find My Match Now!
+                        <div class="fire-effect"></div>
+                    </button>
+                </div>
+                <p class="privacy-note">Your privacy is our priority - No credit card required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose <span>MeetYourLove</span>?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Verified Profiles</h3>
+                    <p>All profiles are verified to ensure authenticity and safety for our community members.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Smart Matching</h3>
+                    <p>Our advanced algorithm connects you with compatible partners based on your preferences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Instant Chat</h3>
+                    <p>Connect instantly with your matches through our secure and private messaging system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Us Different Section -->
+    <section class="difference">
+        <div class="container">
+            <div class="difference-content">
+                <div class="difference-text">
+                    <h2>What Makes Us Different</h2>
+                    <p><i class="fas fa-users" style="color: var(--primary); margin-right: 10px;"></i> Connect with adventurous adults in your area</p>
+                    <p><i class="fas fa-lock" style="color: var(--primary); margin-right: 10px;"></i> Private and discreet - your secrets are safe with us</p>
+                    <p><i class="fas fa-brain" style="color: var(--primary); margin-right: 10px;"></i> Advanced matching based on your desires</p>
+                </div>
+                <div class="difference-stats">
+                    <h3>Active Users Online Now</h3>
+                    <div class="user-counter" id="userCounter">87,436</div>
+                    <p class="counter-label">and counting...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MeetYourLove</h3>
+                    <p>Find your perfect match in your area. Connect with like-minded people near you.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a class="cpa-trigger">Home</a></li>
+                        <li><a class="cpa-trigger">Browse Members</a></li>
+                        <li><a class="cpa-trigger">Success Stories</a></li>
+                        <li><a class="cpa-trigger">Dating Tips</a></li>
+                        <li><a class="cpa-trigger">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a class="cpa-trigger">FAQ</a></li>
+                        <li><a class="cpa-trigger">Safety Tips</a></li>
+                        <li><a class="cpa-trigger">Contact Us</a></li>
+                        <li><a class="cpa-trigger">Report User</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a class="cpa-trigger">Terms of Use</a></li>
+                        <li><a class="cpa-trigger">Privacy Policy</a></li>
+                        <li><a class="cpa-trigger">Cookie Policy</a></li>
+                        <li><a class="cpa-trigger">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 MeetYourLove. All rights reserved. For adults 18+ only.
+            </div>
+        </div>
+    </footer>
+
+    <!-- CPA Script -->
+    <script type="text/javascript" src="https://lockedapp.org/cp/js/mro56"></script>
+
+    <script>
+        // CPA Functionality
+        const cpaModal = document.getElementById('cpaModal');
+        const cpaClose = document.getElementById('cpaClose');
+        const cpaTriggers = document.querySelectorAll('.cpa-trigger');
+        const logo = document.getElementById('logo');
+
+        // Show CPA modal
+        function showCPA() {
+            cpaModal.classList.add('active');
+        }
+
+        // Hide CPA modal
+        function hideCPA() {
+            cpaModal.classList.remove('active');
+        }
+
+        // Add event listeners to all CPA triggers
+        cpaTriggers.forEach(trigger => {
+            trigger.addEventListener('click', showCPA);
+        });
+
+        // Add event listener to logo
+        logo.addEventListener('click', showCPA);
+
+        // Close modal when clicking close button
+        cpaClose.addEventListener('click', hideCPA);
+
+        // Close modal when clicking outside content
+        cpaModal.addEventListener('click', (e) => {
+            if (e.target === cpaModal) {
+                hideCPA();
+            }
+        });
+
+        // Slideshow images
+        const slideshowImages = [
+            "https://cdni.pornpics.com/1280/1/383/72989474/72989474_010_d2c4.jpg","https://cdni.pornpics.com/460/1/376/61222393/61222393_016_5ba2.jpg","https://cdni.pornpics.com/1280/1/170/29474305/29474305_015_7a97.jpg","https://cdni.pornpics.com/1280/1/41/55810520/55810520_010_7be7.jpg"
+        ];
+
+        // Initialize slideshow
+        function initSlideshow() {
+            const slideshowContainer = document.getElementById('slideshowContainer');
+            
+            // Create slides
+            slideshowImages.forEach((imageUrl, index) => {
+                const slide = document.createElement('div');
+                slide.className = `slide ${index === 0 ? 'active' : ''}`;
+                slide.style.backgroundImage = `url('${imageUrl}')`;
+                slideshowContainer.appendChild(slide);
+            });
+            
+            // Start slideshow
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 4000); // Change slide every 4 seconds
+        }
+
+        // Notifications data with beautiful female images only - fixed Mia's image
+        const notifications = [
+            { 
+                name: "Jessica", 
+                text: "just joined and is looking for a partner", 
+                time: "2 mins ago", 
+                avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+            },
+            { 
+                name: "Sophia", 
+                text: "is now online and ready to chat", 
+                time: "5 mins ago", 
+                avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+            },
+            { 
+                name: "Emma", 
+                text: "uploaded new photos to her profile", 
+                time: "8 mins ago", 
+                avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+            },
+            { 
+                name: "Chloe", 
+                text: "is looking for someone in her area", 
+                time: "12 mins ago", 
+                avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+            },
+            { 
+                name: "Rachel", 
+                text: "is online and responding to messages", 
+                time: "15 mins ago", 
+                avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+            },
+            { 
+                name: "Mia", 
+                text: "just liked your profile", 
+                time: "18 mins ago", 
+                avatar: "https://images.unsplash.com/photo-1503104834685-7205e8607eb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+            },
+            { 
+                name: "Olivia", 
+                text: "sent you a message", 
+                time: "20 mins ago", 
+                avatar: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+            }
+        ];
+
+        // Function to generate a random notification
+        function generateNotification() {
+            const randomIndex = Math.floor(Math.random() * notifications.length);
+            return notifications[randomIndex];
+        }
+
+        // Function to add a notification to the container
+        function addNotification() {
+            const notification = generateNotification();
+            const notificationContainer = document.getElementById('notificationContainer');
+            
+            const notificationElement = document.createElement('div');
+            notificationElement.className = 'notification';
+            
+            notificationElement.innerHTML = `
+                <div class="notification-avatar" style="background-image: url('${notification.avatar}')"></div>
+                <div class="notification-content">
+                    <div class="notification-name">${notification.name}</div>
+                    <div class="notification-text">${notification.text}</div>
+                    <div class="notification-time">${notification.time}</div>
+                </div>
+            `;
+            
+            // Add the new notification at the top
+            if (notificationContainer.firstChild) {
+                notificationContainer.insertBefore(notificationElement, notificationContainer.firstChild);
+            } else {
+                notificationContainer.appendChild(notificationElement);
+            }
+            
+            // Remove the notification after 5 seconds (animation duration)
+            setTimeout(() => {
+                if (notificationElement.parentNode) {
+                    notificationElement.parentNode.removeChild(notificationElement);
+                }
+            }, 5000);
+        }
+
+        // Add a new notification every 10 seconds
+        setInterval(addNotification, 10000);
+
+        // Initialize with some notifications
+        for (let i = 0; i < 2; i++) {
+            setTimeout(() => addNotification(), i * 2000);
+        }
+
+        // Timer for special offer - 5 minutes only
+        let timeLeft = 5 * 60; // 5 minutes in seconds
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            
+            minutesElement.textContent = `${minutes < 10 ? '0' : ''}${minutes}`;
+            secondsElement.textContent = `${seconds < 10 ? '0' : ''}${seconds}`;
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+                
+                // Change color when time is running out
+                if (timeLeft < 60) {
+                    minutesElement.style.color = "#ff0000";
+                    secondsElement.style.color = "#ff0000";
+                }
+            } else {
+                clearInterval(timerInterval);
+                minutesElement.textContent = "00";
+                secondsElement.textContent = "00";
+                minutesElement.style.color = "#ff0000";
+                secondsElement.style.color = "#ff0000";
+                
+                // Add expired message
+                const timerContainer = document.querySelector('.timer-container');
+                timerContainer.innerHTML = '<div class="timer" style="color: #ff0000; font-size: 1.5rem;">OFFER EXPIRED!</div>';
+            }
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
+        updateTimer(); // Initial call
+
+        // User counter
+        let userCount = 87436;
+        const userCounterElement = document.getElementById('userCounter');
+
+        function updateUserCounter() {
+            // Increase the count by a random number between 1 and 5
+            userCount += Math.floor(Math.random() * 5) + 1;
+            userCounterElement.textContent = userCount.toLocaleString();
+        }
+
+        // Update user counter every 3 seconds
+        setInterval(updateUserCounter, 3000);
+
+        // Location detection
+        const userLocationElement = document.getElementById('userLocation');
+        const newUsersMessageElement = document.getElementById('newUsersMessage');
+
+        // Simulate location detection with a list of cities
+        const cities = [
+            "Agadir", "Marrakech", "Casablanca", "Rabat", "Fes", "Tangier", 
+            "Meknes", "Oujda", "Kenitra", "Tetouan", "Safi", "El Jadida"
+        ];
+
+        function detectLocation() {
+            // In a real application, you would use the Geolocation API here
+            // For demonstration, we'll randomly select a city
+            const randomCity = cities[Math.floor(Math.random() * cities.length)];
+            userLocationElement.textContent = `in ${randomCity}`;
+            newUsersMessageElement.textContent = `${Math.floor(Math.random() * 10) + 1} new people in ${randomCity} joined in the last hour! Don't miss out!`;
+        }
+
+        // Simulate location detection after a short delay
+        setTimeout(detectLocation, 1500);
+
+        // Button interactions
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Rocket button effect
+        const rocketBtn = document.querySelector('.btn-hero');
+        rocketBtn.addEventListener('click', function() {
+            // Add extra rocket animation on click
+            this.style.transform = 'translateY(-8px) scale(1.05)';
+            setTimeout(() => {
+                this.style.transform = 'translateY(0) scale(1)';
+            }, 500);
+        });
+
+        // Initialize slideshow when page loads
+        document.addEventListener('DOMContentLoaded', initSlideshow);
+    </script>
+</body>
+</html>
